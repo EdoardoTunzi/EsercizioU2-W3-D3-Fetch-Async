@@ -19,6 +19,7 @@ const fetchLibrary = () => {
                  <h5 class="card-title fs-6 text-start">${book.title}</h5>
                  <p class="card-text fs-3 fw-bolder">${book.price} €</p>
                  <a href="#" class="btn btn-primary btnDiscard">Discard</a>
+                 <a href="#" class="btn btn-secondary btnCart">Add to Cart <i class="bi bi-cart3"></i></a>
                 </div>
           </div>`;
         col.appendChild(cardDiv);
@@ -26,6 +27,11 @@ const fetchLibrary = () => {
 
         discardBtn.addEventListener("click", () => {
           cardDiv.remove();
+        });
+        const addToCartBtn = cardDiv.querySelector(".btnCart");
+        const cartRow = document.getElementById("cartRowDiv");
+        addToCartBtn.addEventListener("click", () => {
+          cartRow.appendChild(cardDiv);
         });
       });
     })
