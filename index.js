@@ -38,8 +38,9 @@ const fetchLibrary = () => {
           //aggiungo la card nella row del carrello
           cartRow.appendChild(cardDiv);
           discardBtn.remove(); //rimuovo il discard button
-          //cambio il testo del bottone aggiungi a carrello
+          //cambio il testo del bottone aggiungi a carrello in Rimuovi dal carrello.
           addToCartBtn.innerHTML = 'Remove from Cart<i class="bi bi-cart3"></i>';
+          //al click rimuovi da shopping cart
           addToCartBtn.addEventListener("click", () => {
             cardDiv.remove(); //il bottone rimuove la card selezionata
           });
